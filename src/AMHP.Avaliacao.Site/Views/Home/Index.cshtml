@@ -1,0 +1,208 @@
+﻿@model UsuarioAvaliacaoViewModel;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Avaliação</h1>
+</div>
+<br />
+<br />
+<form method="post" asp-controller="Home" asp-action="Index">
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <div class="form-check">                    
+                    Nome: <input type="text" name="nome" maxlength=200 size=50 value=@Model.Nome />
+                    <br />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <p>1 - O que são Namespaces?</p>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="pergunta_1_1" asp-for=Pergunta_1 value="1">
+                    <label for="html">Namespaces são membros de uma classe que fornecem um mecanismo flexível para ler, gravar ou calcular o valor de um dado em particular.</label><br>
+                    <input type="radio" id="pergunta_1_2" asp-for=Pergunta_1 value="2">
+                    <label for="html">Namespaces definem um limite para o objeto fora do qual, o objeto é destruído automaticamente.</label><br>
+                    <input type="radio" id="pergunta_1_3" asp-for=Pergunta_1 value="3">
+                    <label for="html">Namespaces são usados para trabalhar com grupos de objetos.</label><br>
+                    <input type="radio" id="pergunta_1_4" asp-for=Pergunta_1 value="4">
+                    <label for="html">Namespaces em c# são conjuntos de identificadores que servem para agrupar funcionalidades comuns.</label><br>
+                    <span asp-validation-for="Pergunta_1" class="text-danger"></span>
+                </div>
+                <hr />
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <p>2 - O que significa Debug?</p>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="pergunta_2_1" asp-for=Pergunta_2 value="1">
+                    <label for="html">Processo no qual o código é colocado em produção.</label><br>
+                    <input type="radio" id="pergunta_2_2" asp-for=Pergunta_2 value="2">
+                    <label for="html">É um processo voltado para identificar e remover qualquer tipo de erro existente no código-fonte de um programa.</label><br>
+                    <input type="radio" id="pergunta_2_3" asp-for=Pergunta_2 value="3">
+                    <label for="html">Rotina onde são efetuados testes da aplicação.</label><br>
+                    <input type="radio" id="pergunta_2_4" asp-for=Pergunta_2 value="4">
+                    <label for="html">Validação de uma aplicação pelo usuário.</label><br>
+                    <span asp-validation-for="Pergunta_2" class="text-danger"></span>
+                </div>
+                <hr />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <p>3 - Qual a diferença entre int.parse e Convert.ToInt32?</p>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="pergunta_3_1" asp-for=Pergunta_3 value="1">
+                    <label for="html">Parse serve para converter string em inteiro e Convert valida se é inteiro</label><br>
+                    <input type="radio" id="pergunta_3_2" asp-for=Pergunta_3 value="2">
+                    <label for="html">Parser serve para converter string em inteiro, já o Convert transforma qualquer objeto em inteiro.</label><br>
+                    <input type="radio" id="pergunta_3_3" asp-for=Pergunta_3 value="3">
+                    <label for="html">Os dois tem a mesma funcionalidade.</label><br>
+                    <input type="radio" id="pergunta_3_4" asp-for=Pergunta_3 value="4">
+                    <label for="html">Nenhuma das alternativas.</label><br>
+                    <span asp-validation-for="Pergunta_3" class="text-danger"></span>
+                </div>
+                <hr />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <p>4 - O que são Nullable Types?</p>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="pergunta_4_1" asp-for=Pergunta_4 value="1">
+                    <label for="html">Usado para validar se um tipo é null</label><br>
+                    <input type="radio" id="pergunta_4_2" asp-for=Pergunta_4 value="2">
+                    <label for="html">É usado quando quer passar referência nula a um objeto.</label><br>
+                    <input type="radio" id="pergunta_4_3" asp-for=Pergunta_4 value="3">
+                    <label for="html">É um tipo primitivo de dado que pode ser usado para converter um objeto em null.</label><br>
+                    <input type="radio" id="pergunta_4_4" asp-for=Pergunta_4 value="4">
+                    <label for="html">Nullable Types é um recurso que permite atribuir o valor null a um tipo de dado que, por padrão, não aceita valores nulos.</label><br>
+                    <span asp-validation-for="Pergunta_4" class="text-danger"></span>
+                </div>
+                <hr />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <p>5 - O que são Interfaces?</p>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="pergunta_5_1" asp-for=Pergunta_5 value="1">
+                    <label for="html">Classe que só é acessada pelo mesmo namespace.</label><br>
+                    <input type="radio" id="pergunta_5_2" asp-for=Pergunta_5 value="2">
+                    <label for="html">Uma interface contém definições para um grupo de funcionalidades relacionadas que um não abstrato class ou um struct deve implementar.</label><br>
+                    <input type="radio" id="pergunta_5_3" asp-for=Pergunta_5 value="3">
+                    <label for="html">É um tipo que só pode ser herdado.</label><br>
+                    <input type="radio" id="pergunta_5_4" asp-for=Pergunta_5 value="4">
+                    <label for="html">Usado para definir que a classe não vai poder ser herdada.</label><br>
+                    <span asp-validation-for="Pergunta_5" class="text-danger"></span>
+                </div>
+                <hr />
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <p>6 - Dado o seguinte código qual seria o valor de "c" ao final da execução do código:</p>
+                    <div><img src=~/codigo_1.png alt="codigo 1" /></div>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="pergunta_6_1" asp-for=Pergunta_6 value="1">
+                    <label for="html">"1"</label><br>
+                    <input type="radio" id="pergunta_6_2" asp-for=Pergunta_6 value="2">
+                    <label for="html">"0"</label><br>
+                    <input type="radio" id="pergunta_6_3" asp-for=Pergunta_6 value="3">
+                    <label for="html">"01"</label><br>
+                    <input type="radio" id="pergunta_6_4" asp-for=Pergunta_6 value="4">
+                    <label for="html">O código vai dar uma exceção.</label><br>
+                    <span asp-validation-for="Pergunta_6" class="text-danger"></span>
+                </div>
+                <hr />
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <p>7 - Dado o seguinte código qual seria o valor exibido no console:</p>
+                    <div><img src=~/codigo_2.png alt="codigo 2" /></div>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="pergunta_7_1" asp-for=Pergunta_7 value="1">
+                    <label for="html">O código vai dar uma exceção.</label><br>
+                    <input type="radio" id="pergunta_7_2" asp-for=Pergunta_7 value="2">
+                    <label for="html">0</label><br>
+                    <input type="radio" id="pergunta_7_3" asp-for=Pergunta_7 value="3">
+                    <label for="html">1</label><br>
+                    <input type="radio" id="pergunta_7_4" asp-for=Pergunta_7 value="4">
+                    <label for="html">2</label><br>
+                    <span asp-validation-for="Pergunta_7" class="text-danger"></span>
+                </div>
+                <hr />
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <p>8 - Dado o seguinte código qual seria o valor da variável "numero" ao final da execução do código:</p>
+                    <div><img src=~/codigo_3.png alt="codigo 3" /></div>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="pergunta_8_1" asp-for=Pergunta_8 value="1">
+                    <label for="html">null</label><br>
+                    <input type="radio" id="pergunta_8_2" asp-for=Pergunta_8 value="2">
+                    <label for="html">0</label><br>
+                    <input type="radio" id="pergunta_8_3" asp-for=Pergunta_8 value="3">
+                    <label for="html">5</label><br>
+                    <input type="radio" id="pergunta_8_4" asp-for=Pergunta_8 value="4">
+                    <label for="html">3</label><br>
+                    <span asp-validation-for="Pergunta_8" class="text-danger"></span>
+                </div>
+                <hr />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <p>9 - Dado o seguinte código qual seria o valor da variável "valor" ao final da execução do código:</p>
+                    <div><img src=~/codigo_4.png alt="codigo 4" /></div>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="pergunta_9_1" asp-for=Pergunta_9 value="1">
+                    <label for="html">"1"</label><br>
+                    <input type="radio" id="pergunta_9_2" asp-for=Pergunta_9 value="2">
+                    <label for="html">null</label><br>
+                    <input type="radio" id="pergunta_9_3" asp-for=Pergunta_9 value="3">
+                    <label for="html">""</label><br>
+                    <input type="radio" id="pergunta_9_4" asp-for=Pergunta_9 value="4">
+                    <label for="html">O código vai dar uma exceção.</label><br>
+                    <span asp-validation-for="Pergunta_9" class="text-danger"></span>
+                </div>
+                <hr />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <p>10 - Dado o seguinte código qual seria o valor da variável "valor" ao final da execução do código:</p>
+                    <div><img src=~/codigo_5.png alt="codigo 5" /></div>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="pergunta_10_1" asp-for=Pergunta_10 value="1">
+                    <label for="html">"1 - c#"</label><br>
+                    <input type="radio" id="pergunta_10_2" asp-for=Pergunta_10 value="2">
+                    <label for="html">null</label><br>
+                    <input type="radio" id="pergunta_10_3" asp-for=Pergunta_10 value="3">
+                    <label for="html">""</label><br>
+                    <input type="radio" id="pergunta_10_4" asp-for=Pergunta_10 value="4">
+                    <label for="html">"1"</label><br>
+                    <span asp-validation-for="Pergunta_10" class="text-danger"></span>
+                </div>
+                <hr />
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+    <input type="submit" value="Salvar"/>
+</div>
+</form>
