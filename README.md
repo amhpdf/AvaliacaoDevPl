@@ -6,15 +6,13 @@ Essa aplicação foi desenvolvida em .NET 6 com banco de dados sqlite. O desenvo
 ## Orientações
 
 1. Criar um fork do projeto;
-2. Executar as correções dos erros da aplicação;
+2. Executar as correções necessárias;
 3. Executar a aplicação para responder o teste teórico nela contido;
 4. Ao final fazer um pull request com os ajustes.
 
 ## Atenção
 
-. O projeto possui erros de compilação e execução que deverão ser ajustados pelo Desenvolvedor.
-
-. O projeto também conta com testes de unidade que devem está funcionando para a entrega do projeto.
+. O projeto possui erros de compilação e execução e testes unitários que deverão ser ajustados pelo Desenvolvedor.
 
 . Após corrigir os erros o Desenvolvedor deve executar a aplicação e responder o teste teórico.
 
